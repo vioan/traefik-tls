@@ -4,6 +4,9 @@
 certdir="tls"
 host="localhost"
 
+# certdir directory has to be created
+mkdir tls
+
 # setup a CA key
 if [ ! -f "$certdir/ca-key.pem" ]; then
   openssl genrsa -out "${certdir}/ca-key.pem" 4096
